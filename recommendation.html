@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recommendation — NutriGuide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">🥦 NutriGuide</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="nutrition.html">Nutrition Search</a></li>
+            <li><a href="recommendation.html" class="active">Recommendations</a></li>
+            <li><a href="bmi.html">BMI Calculator</a></li>
+            <li><a href="login.html" class="btn-nav">Create Profile</a></li>
+        </ul>
+    </nav>
+
+    <div class="form-container wide">
+
+        <h2>🥗 Food Recommendation</h2>
+        <p class="subtitle">Filter foods by your nutrition requirements.</p>
+
+        <label>Minimum Protein Required (g)</label>
+        <input
+            type="number"
+            id="proteinInput"
+            placeholder="e.g. 10"
+            min="0"
+        >
+
+        <label>Maximum Calories Allowed (kcal)</label>
+        <input
+            type="number"
+            id="calorieInput"
+            placeholder="e.g. 200"
+            min="0"
+        >
+
+        <button onclick="recommendFood()">Get Recommendations</button>
+
+        <div class="result" id="recommendationResult">
+            Enter your requirements and click the button.
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 NutriGuide | Fitness &amp; Nutrition Advisor</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

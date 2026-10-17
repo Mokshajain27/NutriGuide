@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriGuide — Know What You Eat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">🥦 NutriGuide</div>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="nutrition.html">Nutrition Search</a></li>
+            <li><a href="recommendation.html">Recommendations</a></li>
+            <li><a href="bmi.html">BMI Calculator</a></li>
+            <li><a href="login.html" class="btn-nav">Create Profile</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Know What You Eat</h1>
+        <p>Search nutrition facts, discover healthy foods, and achieve your fitness goals.</p>
+        <div class="hero-search">
+            <input type="text" id="heroInput" placeholder="Search food (e.g. egg, banana, paneer)…"
+                   onkeydown="if(event.key==='Enter') heroSearch()">
+            <button onclick="heroSearch()">Search</button>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <h2>Popular Categories</h2>
+        <div class="category-container">
+            <div class="category-card" onclick="window.location='nutrition.html?food=chicken breast'">
+                <div class="cat-icon">🍗</div>
+                <h3>Protein Rich</h3>
+                <p>Chicken, Egg, Paneer</p>
+            </div>
+            <div class="category-card" onclick="window.location='nutrition.html?food=watermelon'">
+                <div class="cat-icon">🥗</div>
+                <h3>Low Calories</h3>
+                <p>Fruits, Salads</p>
+            </div>
+            <div class="category-card" onclick="window.location='nutrition.html?food=almonds'">
+                <div class="cat-icon">🥑</div>
+                <h3>Healthy Fats</h3>
+                <p>Nuts, Avocado</p>
+            </div>
+            <div class="category-card" onclick="window.location='nutrition.html?food=orange'">
+                <div class="cat-icon">🍊</div>
+                <h3>Vitamin Rich</h3>
+                <p>Citrus, Papaya</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Foods -->
+    <section class="featured">
+        <h2>Featured Foods</h2>
+        <div class="food-container">
+            <div class="food-card" onclick="window.location='nutrition.html?food=egg'">
+                <div class="food-icon">🥚</div>
+                <h3>Egg</h3>
+                <p>Calories: 78 kcal</p>
+                <p>Protein: 6g</p>
+            </div>
+            <div class="food-card" onclick="window.location='nutrition.html?food=banana'">
+                <div class="food-icon">🍌</div>
+                <h3>Banana</h3>
+                <p>Calories: 89 kcal</p>
+                <p>Carbs: 23g</p>
+            </div>
+            <div class="food-card" onclick="window.location='nutrition.html?food=paneer'">
+                <div class="food-icon">🧀</div>
+                <h3>Paneer</h3>
+                <p>Calories: 265 kcal</p>
+                <p>Protein: 18g</p>
+            </div>
+            <div class="food-card" onclick="window.location='nutrition.html?food=chicken breast'">
+                <div class="food-icon">🍗</div>
+                <h3>Chicken Breast</h3>
+                <p>Calories: 165 kcal</p>
+                <p>Protein: 31g</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips -->
+    <section class="tips">
+        <h2>Daily Nutrition Tips</h2>
+        <ul>
+            <li>💧 Drink at least 3 litres of water daily.</li>
+            <li>🥩 Include protein in every meal.</li>
+            <li>🥦 Eat more fruits and vegetables.</li>
+            <li>🚫 Avoid excessive sugary drinks.</li>
+            <li>🌙 Avoid heavy meals within 2 hours of sleep.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2026 NutriGuide | Fitness &amp; Nutrition Advisor</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function heroSearch() {
+            const val = document.getElementById("heroInput").value.trim();
+            if (val) window.location.href = "nutrition.html?food=" + encodeURIComponent(val);
+        }
+    </script>
+</body>
+</html>

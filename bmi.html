@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator — NutriGuide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">🥦 NutriGuide</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="nutrition.html">Nutrition Search</a></li>
+            <li><a href="recommendation.html">Recommendations</a></li>
+            <li><a href="bmi.html" class="active">BMI Calculator</a></li>
+            <li><a href="login.html" class="btn-nav">Create Profile</a></li>
+        </ul>
+    </nav>
+
+    <div class="form-container">
+
+        <h2>⚖️ BMI Calculator</h2>
+        <p class="subtitle">Enter your measurements to calculate your Body Mass Index.</p>
+
+        <label>Height (cm)</label>
+        <input
+            type="number"
+            id="height"
+            placeholder="e.g. 170"
+            min="50" max="250"
+        >
+
+        <label>Weight (kg)</label>
+        <input
+            type="number"
+            id="weight"
+            placeholder="e.g. 65"
+            min="10" max="300"
+        >
+
+        <button onclick="calculateBMI()">Calculate BMI</button>
+
+        <div class="result" id="bmiResult">
+            Enter height and weight to calculate BMI.
+        </div>
+
+        <!-- BMI Reference Chart -->
+        <div class="bmi-legend">
+            <div class="bmi-band" style="background:#f59e0b20;border-left:4px solid #f59e0b">
+                <strong>Under 18.5</strong> — Underweight
+            </div>
+            <div class="bmi-band" style="background:#10b98120;border-left:4px solid #10b981">
+                <strong>18.5 – 24.9</strong> — Normal Weight
+            </div>
+            <div class="bmi-band" style="background:#f9731620;border-left:4px solid #f97316">
+                <strong>25 – 29.9</strong> — Overweight
+            </div>
+            <div class="bmi-band" style="background:#ef444420;border-left:4px solid #ef4444">
+                <strong>30 and above</strong> — Obese
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 NutriGuide | Fitness &amp; Nutrition Advisor</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

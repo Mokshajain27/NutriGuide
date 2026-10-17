@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Profile — NutriGuide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">🥦 NutriGuide</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="nutrition.html">Nutrition Search</a></li>
+            <li><a href="recommendation.html">Recommendations</a></li>
+            <li><a href="bmi.html">BMI Calculator</a></li>
+            <li><a href="login.html" class="active btn-nav">Create Profile</a></li>
+        </ul>
+    </nav>
+
+    <div class="form-container">
+
+        <h2>👤 Create Profile</h2>
+        <p class="subtitle">Save your details to get personalised nutrition guidance.</p>
+
+        <form id="userForm">
+
+            <label>Full Name *</label>
+            <input type="text" id="name" placeholder="Enter your full name" required>
+
+            <label>Age *</label>
+            <input type="number" id="age" placeholder="Enter your age" min="1" max="120" required>
+
+            <label>Contact Number</label>
+            <input type="tel" id="contact" placeholder="Enter contact number">
+
+            <label>Email Address *</label>
+            <input type="email" id="email" placeholder="Enter email address" required>
+
+            <label>Fitness Goal *</label>
+            <select id="goal" required>
+                <option value="">Select your fitness goal</option>
+                <option value="Weight Loss">Weight Loss</option>
+                <option value="Muscle Gain">Muscle Gain</option>
+                <option value="Weight Maintenance">Weight Maintenance</option>
+            </select>
+
+            <button type="submit">Save Profile</button>
+
+        </form>
+
+        <div class="result" id="profileResult"></div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 NutriGuide | Fitness &amp; Nutrition Advisor</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

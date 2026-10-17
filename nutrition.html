@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Search — NutriGuide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">🥦 NutriGuide</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="nutrition.html" class="active">Nutrition Search</a></li>
+            <li><a href="recommendation.html">Recommendations</a></li>
+            <li><a href="bmi.html">BMI Calculator</a></li>
+            <li><a href="login.html" class="btn-nav">Create Profile</a></li>
+        </ul>
+    </nav>
+
+    <div class="form-container wide">
+
+        <h2>🔍 Nutrition Search</h2>
+        <p class="subtitle">Search any food to view its nutrition facts.</p>
+
+        <div class="input-row">
+            <input
+                type="text"
+                id="foodName"
+                placeholder="Enter food name (e.g. egg, banana, oats)…"
+                onkeydown="if(event.key==='Enter') searchFood()"
+            >
+            <button onclick="searchFood()">Search</button>
+        </div>
+
+        <!-- Quick Suggestions -->
+        <div class="tags">
+            <span onclick="quickSearch('egg')">🥚 Egg</span>
+            <span onclick="quickSearch('banana')">🍌 Banana</span>
+            <span onclick="quickSearch('paneer')">🧀 Paneer</span>
+            <span onclick="quickSearch('chicken breast')">🍗 Chicken Breast</span>
+            <span onclick="quickSearch('oats')">🌾 Oats</span>
+            <span onclick="quickSearch('almonds')">🥜 Almonds</span>
+        </div>
+
+        <div class="result" id="nutritionResult">
+            Search a food item to view nutrition details.
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 NutriGuide | Fitness &amp; Nutrition Advisor</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function quickSearch(name) {
+            document.getElementById("foodName").value = name;
+            searchFood();
+        }
+    </script>
+</body>
+</html>
